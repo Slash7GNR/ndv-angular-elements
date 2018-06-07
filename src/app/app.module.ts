@@ -12,7 +12,9 @@ import { AppComponent } from './app.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [
+    AppComponent
+  ]
 })
 export class AppModule {
   constructor(private injector: Injector) { }
@@ -20,6 +22,6 @@ export class AppModule {
   ngDoBootstrap() {
     const el = createCustomElement(AppComponent, {injector: this.injector});
     
-    customElements.define('ndv', el);
+    customElements.define('pls-wrk', el);
   }
  }
